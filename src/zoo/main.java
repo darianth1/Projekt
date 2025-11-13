@@ -1,12 +1,8 @@
 package zoo;
 
-/**
- *
- * @author 14247055
- */
 public class main {
     public static void main(String[] args) {
-    Person person = new Person();
-    person.Personerstellen("Lenny", 12);
+    Person person = new Person("Lenny", 12);
+    Angebot angebot = new Angebot("Test", 2.0);
  }
 }

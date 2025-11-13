@@ -1,14 +1,10 @@
 
 package zoo;
 
-/**
- *
- * @author 14247055
- */
 public class Person {
 String name;
 int alter;
-public void Personerstellen(String name, int alter) {
+public Person(String name, int alter) {
     this.name = name;
     this.alter = alter;
           System.out.println("Person erstellt: " + name + alter);
