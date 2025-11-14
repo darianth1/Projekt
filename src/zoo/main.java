@@ -21,5 +21,7 @@ public class main {
         new Bereich("Eurasien", 3.00),
         new Bereich("Nordamerika", 2.50)
         );
+  Bestellung bestellung = new Bestellung(gruppe, angebote, bereich, park); 
+  bestellung.printRechnung();
  }
 }

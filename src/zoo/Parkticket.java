@@ -11,7 +11,7 @@ package zoo;
 public class Parkticket {
     public double ticket;
     
-    public Parkticket(double preis){
+    public Parkticket(double ticket){
       this.ticket = ticket;  
     }
     public double getPreis() {

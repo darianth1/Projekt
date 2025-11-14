@@ -2,12 +2,11 @@
 package zoo;
 
 public class Person {
-String name;
-int alter;
+ String name;
+ int alter;
 public Person(String name, int alter) {
     this.name = name;
     this.alter = alter;
-          System.out.println("Person erstellt: " + name + alter);
 }
 
     public double getTicketPreis() {

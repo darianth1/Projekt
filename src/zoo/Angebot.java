@@ -14,7 +14,6 @@ double preis;
  public Angebot(String name, double preis) {
         this.name = name;
         this.preis = preis;
-         System.out.println("Person erstellt: " + name + preis);
     }
 
     public String getName() {
