@@ -10,7 +10,7 @@ public Person(String name, int alter) {
 }
 
     public double getTicketPreis() {
-        if (alter < 14) return 10.0;      // Kind
+        if (alter < 17) return 10.0;      // Kind
         if (alter < 65) return 20.0;      // Erwachsener
         return 15.0;                      // Senior
     }
