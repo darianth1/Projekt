@@ -8,12 +8,12 @@ public class Bestellung {
     List<Person> personen;
     List<Angebot> angebote;
     List<Bereich> bereiche;
-    Parkticket park;
+    double park;
 
     int auftragsNummer;
 
     public Bestellung(List<Person> personen, List<Angebot> angebote, 
-                      List<Bereich> bereiche, Parkticket park) {
+                      List<Bereich> bereiche, double park) {
 
         this.personen = personen;
         this.angebote = angebote;
@@ -40,7 +40,7 @@ public class Bestellung {
         for (Bereich b : bereiche)
             sum += b.getPreis();
 
-        sum += park.getPreis();
+        sum += park;
 
         return sum;
     }
@@ -67,7 +67,7 @@ public class Bestellung {
         for (Angebot a : angebote)
             System.out.println(a.getName() + ": " + a.getPreis());
 
-        System.out.println("\nParkticket: " + park.getPreis());
+        System.out.println("\nParkticket: " + park);
 
         System.out.println("-----------------------------------");
         System.out.println("Gesamt: " + getGesamtPreis());

@@ -55,19 +55,20 @@ List<Angebot> angebote = new ArrayList<>();
                     break;
            }
           
-        
-        Parkticket park = new Parkticket(5.00);
+  
  
         List<Bereich> bereich = new ArrayList<>();
         System.out.println("Sie können ihr Erlebnis im Zoo konfigurieren in dem sie die Bereiche wählen");
-        System.out.println("Eurasien 1 /n"
-                + "Afrika 2 "
-                + "Nordamerika 3 "
-                + "Südamerika 4 "
-                + "Australien und Ozeanien 5 "
-                + "tropisches Zentrum 6 "
-                + "Meereswelt 7 "
-                + "Kein Angebot nutzen ");
+        System.out.println("Eurasien 1");
+        System.out.println("Afrika 2 ");
+        System.out.println("Nordamerika 3 ");
+        System.out.println("Südamerika 4 "); 
+        System.out.println("Australien und Ozeanien 5 ");
+        System.out.println( "tropisches Zentrum 6 ");
+        System.out.println( "Meereswelt 7 ");
+        System.out.println( "Kein Angebot nutzen ");
+           
+   
         int be_reiche = s.nextInt();
         switch (be_reiche) {
                case 1:
@@ -98,15 +99,15 @@ List<Angebot> angebote = new ArrayList<>();
                    System.out.println("Keine gültige Wahl");
                     break;
            }
-              
-        bereich.add(new Bereich("Eurasien", 9.00));
-        bereich.add(new Bereich("Afrika", 5.00));
-        bereich.add(new Bereich("Nordamerika", 7.50));
-        bereich.add(new Bereich("Südamerika", 8.00));
-        bereich.add(new Bereich("Australien und Ozeanien", 6.00));
-        bereich.add(new Bereich("tropisches Zentrum", 15.00));
-        bereich.add(new Bereich("Meereswelt", 20.00));
-
+        
+        
+        double park = 0;
+        System.out.println("Brauchen sie ein Parkticket Ja/Nein");
+        String parkabfrage = s.nextLine();
+    if (parkabfrage.equalsIgnoreCase("Ja")) {
+         park = 5.0;
+    }     
+       
   Bestellung bestellung = new Bestellung(gruppe, angebote, bereich, park); 
   bestellung.printRechnung();
  }
