@@ -30,10 +30,12 @@ while (i == 1) {
 
 
 List<Angebot> angebote = new ArrayList<>();
-
-    System.out.println("Moechten sie das Angebot 'Hirsche streicheln' in anspruch nehmen dann drücken sie die '1'"
-            + "Moechten sie das Angebot 'Bären-Show' in anspruch nehmen dann drücken sie die 2"
-            + "Wenn sie beides beanspruchen wollen dann drücken sie die 3");
+while (i == 2) {
+    System.out.println("Moechten sie das Angebot 'Hirsche streicheln' in anspruch nehmen dann drücken sie die '1'");
+    System.out.println("Moechten sie das Angebot 'Bären-Show' in anspruch nehmen dann drücken sie die 2");        
+    System.out.println("Wenn sie beides beanspruchen wollen dann drücken sie die 3");
+    System.out.println("Moechten sie das Angebot 'Fische füttern' in anspruch nehmen dann drücken sie die 4");
+    System.out.println("Wenn sie kein Angebot beanspruchen wollen dann drücke sie die 5");
            int an_gebote = s.nextInt();
            
            switch (an_gebote) {
@@ -48,16 +50,21 @@ List<Angebot> angebote = new ArrayList<>();
                angebote.add(new Angebot("Bären-Show", 12.00));
                     break;
                case 4:
+                angebote.add(new Angebot("Fische füttern", 850.00));
+                    break;                   
+               case 5:
                    System.out.println("Kein Angebot beansprucht");
+                   i = 3;
                     break;
                default:
                    System.out.println("Keine gültige Wahl");
                     break;
            }
-          
+}
   
  
         List<Bereich> bereich = new ArrayList<>();
+        while (i == 3) {
         System.out.println("Sie können ihr Erlebnis im Zoo konfigurieren in dem sie die Bereiche wählen");
         System.out.println("Eurasien 1");
         System.out.println("Afrika 2 ");
@@ -66,7 +73,7 @@ List<Angebot> angebote = new ArrayList<>();
         System.out.println("Australien und Ozeanien 5 ");
         System.out.println( "tropisches Zentrum 6 ");
         System.out.println( "Meereswelt 7 ");
-        System.out.println( "Kein Angebot nutzen ");
+        System.out.println( "Kein weiteres Angebot nutzen 8");
            
    
         int be_reiche = s.nextInt();
@@ -93,15 +100,18 @@ List<Angebot> angebote = new ArrayList<>();
                bereich.add(new Bereich("Meereswelt", 20.00));
                     break;     
                case 8:
-                   System.out.println("Kein Angebot beansprucht");
+                   System.out.println("Kein weiteres Angebot beansprucht");
+                   i = 4;
                     break;
                default:
-                   System.out.println("Keine gültige Wahl");
+                   System.out.println("Keine gültige Eingabe");
                     break;
            }
+        }
         
         
         double park = 0;
+        s.nextLine();
         System.out.println("Brauchen sie ein Parkticket Ja/Nein");
         String parkabfrage = s.nextLine();
     if (parkabfrage.equalsIgnoreCase("Ja")) {
